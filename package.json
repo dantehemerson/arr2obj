@@ -1,0 +1,8 @@
+{
+  "name": "arr2obj",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "https://github.com/dantehemerson/arr2obj.git",
+  "author": "Dante Calderón <dantehemerson@gmail.com>",
+  "license": "MIT"
+}
