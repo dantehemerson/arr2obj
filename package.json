@@ -1,9 +1,10 @@
 {
   "name": "arr2obj",
+  "description": "Convert array to object with key-value.",
   "version": "0.1.0",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": "https://github.com/dantehemerson/arr2obj.git",
-  "author": "Dante Calderón <dantehemerson@gmail.com>",
+  "author": "Dante Calderón <mail@dantecalderon.dev>",
   "license": "MIT",
   "scripts": {
     "build": "rimraf dist && tsc",
