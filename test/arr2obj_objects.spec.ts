@@ -1,4 +1,4 @@
-import { arrayToObject } from '../src/index'
+import { arr2obj } from '../src/index'
 
 const simpleObjectArray = [
   {
@@ -28,7 +28,7 @@ const multipleTypeArray = [
 describe('With object array.', () => {
   describe('No provide any options: ', () => {
     it('Should return key as "[object Object]" and value as the last item of array.', () => {
-      expect(arrayToObject(simpleObjectArray)).toEqual({
+      expect(arr2obj(simpleObjectArray)).toEqual({
         // exists only one item because key is always the same,and
         // the last because iterate through items
         '[object Object]': simpleObjectArray[simpleObjectArray.length - 1]
@@ -38,7 +38,7 @@ describe('With object array.', () => {
 
   describe('Provide key function and value function.', () => {
     it('Should return key as "[object Object]" and value as the last item of array.', () => {
-      expect(arrayToObject(multipleTypeArray)).toEqual({
+      expect(arr2obj(multipleTypeArray)).toEqual({
         1: 1,
         0: 0,
         string: 'string',

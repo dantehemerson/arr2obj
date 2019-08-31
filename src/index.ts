@@ -1,6 +1,6 @@
-declare interface Options {
-  key?: Function
-  value?: Function
+interface Options {
+  key?: (item: any) => object | number | string | boolean
+  value?: (item: any) => object | number | string | boolean
 }
 
 /**
@@ -15,7 +15,7 @@ function getOptionFunction(option: Options, key: string): Function {
   return undefined
 }
 
-export const arrayToObject = (array: Array<any>, options?: Options) => {
+export const arr2obj = (array: Array<any>, options?: Options) => {
   if (!isValidArray(array)) {
     return {}
   }
@@ -29,7 +29,6 @@ export const arrayToObject = (array: Array<any>, options?: Options) => {
     if (key || typeof key === 'number') {
       obj[key] = value
     }
-
     return obj
   }, {})
 }
@@ -41,3 +40,5 @@ function isValidArray(array: Array<any>) {
 function isValidObject(object: any): Boolean {
   return object && typeof object === 'object'
 }
+
+export default arr2obj
