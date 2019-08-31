@@ -1,5 +1,5 @@
 {
-  "name": "arr2obj",
+  "name": "@dantehemerson/arr2obj",
   "description": "Convert array to object with key-value.",
   "version": "0.1.0",
   "main": "dist/index.js",

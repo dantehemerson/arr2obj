@@ -15,7 +15,7 @@ function getOptionFunction(option: Options, key: string): Function {
   return undefined
 }
 
-export const arr2obj = (array: Array<any>, options?: Options) => {
+export const arr2obj = (array: Array<any>, options?: Options): Object => {
   if (!isValidArray(array)) {
     return {}
   }
