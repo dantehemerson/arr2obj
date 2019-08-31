@@ -33,8 +33,8 @@ export const arr2obj = (array: Array<any>, options?: Options) => {
   }, {})
 }
 
-function isValidArray(array: Array<any>) {
-  return Array.isArray(array) && array.length
+function isValidArray(array: Array<any>): Boolean {
+  return Array.isArray(array) && array.length !== 0
 }
 
 function isValidObject(object: any): Boolean {

@@ -46,4 +46,38 @@ describe('With object array.', () => {
       })
     })
   })
+
+  describe('Provide function without return value(js return undefined by default)', () => {
+    it('Should return empty object for key without return value.', () => {
+      expect(
+        arr2obj(simpleObjectArray, {
+          key: item => {
+            return undefined
+          }
+        })
+      ).toEqual({})
+    })
+
+    it('Should return empty object for value without return value.', () => {
+      /**
+       * But Why?
+       *
+       * If fields of objects are undefined, these not exists.
+       * For example for check if element of object exists, we have:
+       * if(object['key'])
+       * but if object is: {
+       *  key: undefined
+       * }
+       * object['key'] is undefined; the condition is Falsy 🤖.
+       */
+      expect(
+        arr2obj(simpleObjectArray, {
+          key: item => item.id,
+          value: item => {
+            return undefined
+          }
+        })
+      ).toEqual({})
+    })
+  })
 })
