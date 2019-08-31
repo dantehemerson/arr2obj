@@ -26,7 +26,7 @@ export const arrayToObject = (array: Array<any>, options?: Options) => {
   return array.reduce((obj, item) => {
     const key = keyFunc ? keyFunc(item) : item
     const value = valueFunc ? valueFunc(item) : item
-    if (item || typeof item === 'number') {
+    if (key || typeof key === 'number') {
       obj[key] = value
     }
 

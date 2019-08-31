@@ -25,6 +25,10 @@ describe('With basic tests (with argument without errors)', () => {
     expect(arrayToObject([null])).toEqual({})
   })
 
+  it('Should return item for 0 number', () => {
+    expect(arrayToObject([0, null, undefined])).toEqual({ 0: 0 })
+  })
+
   it('Should return new Key with key function', () => {
     expect(arrayToObject([1, 2, 3], { key: item => `pre-${item}-post` })).toEqual({
       'pre-1-post': 1,
