@@ -1,7 +1,7 @@
 {
   "name": "@dantehemerson/arr2obj",
   "description": "Convert array to object with key-value.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "dist/index.js",
   "repository": "https://github.com/dantehemerson/arr2obj.git",
   "author": "Dante Calderón <mail@dantecalderon.dev>",
