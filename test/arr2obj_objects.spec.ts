@@ -1,6 +1,10 @@
 import { arr2obj } from '../src/index'
 
-const simpleObjectArray = [
+interface ItemArray {
+  id: number
+}
+
+const simpleObjectArray: Array<ItemArray> = [
   {
     id: 1
   },
@@ -71,7 +75,7 @@ describe('With object array.', () => {
        * object['key'] is undefined; the condition is Falsy 🤖.
        */
       expect(
-        arr2obj(simpleObjectArray, {
+        arr2obj<ItemArray>(simpleObjectArray, {
           key: item => item.id,
           value: item => {
             return undefined

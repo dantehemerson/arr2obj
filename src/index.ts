@@ -1,13 +1,13 @@
-interface Options {
-  key?: (item: any) => object | number | string | boolean
-  value?: (item: any) => object | number | string | boolean
+interface Options<T> {
+  key?: (item: T) => object | number | string | boolean
+  value?: (item: T) => object | number | string | boolean
 }
 
 /**
  * Validate an option key.
  * @param optionKey should be one key of Option(ejm: key, value)
  */
-function getOptionFunction(option: Options, key: string): Function {
+function getOptionFunction<T>(option: Options<T>, key: string): Function {
   const optionFunc = isValidObject(option) ? option[key] : undefined
   if (optionFunc && typeof optionFunc === 'function') {
     return optionFunc
@@ -15,7 +15,7 @@ function getOptionFunction(option: Options, key: string): Function {
   return undefined
 }
 
-export const arr2obj = (array: Array<any>, options?: Options): Object => {
+export const arr2obj = <T = any>(array: Array<any>, options?: Options<T>): Object => {
   if (!isValidArray(array)) {
     return {}
   }
