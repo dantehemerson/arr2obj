@@ -112,6 +112,6 @@ const result = arr2obj(arr, {
 
 [Dante Calderon](https://dantecalderon.dev) - [@dantehemerson](https://github.com/dantehemerson)
 
-### Licence
+## Licence
 
-[MIT](./LICENCE)
+[MIT](./LICENSE)
